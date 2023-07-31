@@ -1,0 +1,63 @@
+{
+  "columns": [
+    {
+      "name": "@timestamp",
+      "visible": true
+    },
+    {
+      "name": "severity",
+      "visible": true
+    },
+    {
+      "name": "service",
+      "visible": false
+    },
+    {
+      "name": "trace",
+      "visible": false
+    },
+    {
+      "name": "span",
+      "visible": false
+    },
+    {
+      "name": "thread",
+      "visible": true
+    },
+    {
+      "name": "class",
+      "visible": true
+    },
+    {
+      "name": "msg",
+      "visible": true
+    },
+    {
+      "name": "version",
+      "visible": false
+    }
+  ],
+  "stacktraceVisible": true,
+  "severity": {
+    "DEBUG": {
+      "visible": true,
+      "highlight": false,
+      "color": "region.greenish"
+    },
+    "INFO": {
+      "visible": true,
+      "highlight": false,
+      "color": "region.grayish"
+    },
+    "WARN": {
+      "visible": true,
+      "highlight": false,
+      "color": "region.yellowish"
+    },
+    "ERROR": {
+      "visible": true,
+      "highlight": false,
+      "color": "region.redish"
+    }
+  }
+}

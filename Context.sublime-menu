@@ -1,0 +1,7 @@
+[
+    {
+        "caption": "View Log",
+        "command": "create_log",
+        "args": {}
+    }
+]
