@@ -47,17 +47,7 @@ def log_line(parsed_line, columns):
   return line
 
 
-class CreateLogCommand(sublime_plugin.TextCommand):
-
-  def is_visible(self):
-    for line in self.view.substr(sublime.Region(0, len(self.view))).split('\n')[
-                -50:]:
-      try:
-        json.loads(line)
-        return True
-      except ValueError:
-        pass
-    return False
+class ViewLogCommand(sublime_plugin.TextCommand):
 
   def run(self, edit):
     new_view = self.view.window().new_file()
@@ -104,3 +94,45 @@ class UpdateColumnSettingsCommand(sublime_plugin.TextCommand):
 
     self.view.erase(edit, sublime.Region(0, self.view.size()))
     display_log(self.view)
+
+
+class LogbackJsonLogViewerOpenDefaultSettingsCommand(
+    sublime_plugin.WindowCommand):
+  def run(self):
+    self.window.run_command(
+        'open_file',
+        {
+          "file": "${packages}/LogbackJsonLogViewer/LogbackJsonLogViewer.sublime-settings"
+        }
+    )
+
+
+class LogbackJsonLogViewerOpenUserSettingsCommand(sublime_plugin.WindowCommand):
+  def run(self):
+    self.window.run_command(
+        'open_file',
+        {
+          "file": "${packages}/User/LogbackJsonLogViewer.sublime-settings",
+          "contents":
+            "// See Preferences > Package Settings > LogbackJsonLogViewer > Settings - Default\n"
+            "// for the list of settings and valid values\n"
+            "{\n"
+            "\t$0\n"
+            "}\n"
+        }
+    )
+
+
+class LogbackJsonLogViewerEditSettingsCommand(sublime_plugin.WindowCommand):
+  def run(self):
+    self.window.run_command(
+        'edit_settings',
+        {
+          "base_file": "${packages}/LogbackJsonLogViewer/LogbackJsonLogViewer.sublime-settings",
+          "default":
+            "// See the left pane for the list of settings and valid values\n"
+            "{\n"
+            "\t$0\n"
+            "}\n"
+        }
+    )

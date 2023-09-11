@@ -1,7 +1,7 @@
 [
     {
-        "caption": "View Log",
-        "command": "create_log",
+        "caption": "View as Logback JSON Log",
+        "command": "view_log",
         "args": {}
     }
 ]
