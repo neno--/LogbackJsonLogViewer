@@ -53,6 +53,12 @@ You can toggle pre-defined columns using numerical keys:
 
 ## Installation
 
+### [Package Control](https://packagecontrol.io/installation)
+1. Open Package Control: `Preferences -> Package Control`.
+2. Select `Package Control: Install Package`.
+3. Type `LogbackJsonLogViewer` into the search box and select the package to install it.
+
+### Manual
 **Without Git:** Download the latest source from [GitHub](https://github.com/neno--/LogbackJsonLogViewer) and copy the whole directory into
 the `Packages` directory.
 
