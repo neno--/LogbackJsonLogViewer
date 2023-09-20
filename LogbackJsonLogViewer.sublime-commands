@@ -1,0 +1,7 @@
+[
+    {
+        "caption": "LogbackJsonLogViewer: View as Logback JSON Log",
+        "command": "view_log",
+        "args": {}
+    }
+]

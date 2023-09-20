@@ -1,35 +1,26 @@
 [
-    {
-        "id": "preferences",
-        "children":
-        [
-            {
-                "caption": "Package Settings",
-                "mnemonic": "P",
-                "id": "package-settings",
-                "children":
-                [
-                    {
-                        "caption": "LogbackJsonLogViewer",
-                        "children":
-                        [
-                            {
-                                "command": "logback_json_log_viewer_open_default_settings",
-                                "caption": "Settings – Default"
-                            },
-                            {
-                                "command": "logback_json_log_viewer_open_user_settings",
-                                "caption": "Settings – User"
-                            },
-                            {
-                                "command": "logback_json_log_viewer_edit_settings",
-                                "caption": "Override Settings"
-                            },
-                            { "caption": "-" }
-                        ]
-                    }
-                ]
-            }
+  {
+    "id": "preferences",
+    "children": [
+      {
+        "caption": "Package Settings",
+        "id": "package-settings",
+        "children": [
+          {
+            "caption": "LogbackJsonLogViewer",
+            "children": [
+              {
+                "command": "edit_settings",
+                "args": {
+                  "base_file": "${packages}/LogbackJsonLogViewer/LogbackJsonLogViewer.sublime-settings",
+                  "default": "{\n$0\n}\n"
+                },
+                "caption": "LogbackJsonLogViewer Settings"
+              }
+            ]
+          }
         ]
-    }
+      }
+    ]
+  }
 ]
