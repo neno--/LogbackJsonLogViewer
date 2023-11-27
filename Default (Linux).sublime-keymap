@@ -1,69 +1,282 @@
 [
-	{ "keys": ["super+1"], "command": "update_severity_settings",	"args": {"log_level": "DEBUG", "log_operation": "filter"},
-		"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
-	},
-
-	{ "keys": ["super+2"], "command": "update_severity_settings",	"args": {"log_level": "INFO", "log_operation": "filter"},
-		"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
-	},
-
-	{ "keys": ["super+3"], "command": "update_severity_settings",	"args": {"log_level": "WARN", "log_operation": "filter"},
-		"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
-	},
-
-	{ "keys": ["super+4"], "command": "update_severity_settings",	"args": {"log_level": "ERROR", "log_operation": "filter"},
-		"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
-	},
-
-	{ "keys": ["alt+1"], "command": "update_severity_settings",	"args": {"log_level": "DEBUG", "log_operation": "highlight"},
-  	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "super+1"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "DEBUG",
+      "log_operation": "filter"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["alt+2"], "command": "update_severity_settings",	"args": {"log_level": "INFO", "log_operation": "highlight"},
-  	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
-	},
-
-  { "keys": ["alt+3"], "command": "update_severity_settings",	"args": {"log_level": "WARN", "log_operation": "highlight"},
-  	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "super+2"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "INFO",
+      "log_operation": "filter"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["alt+4"], "command": "update_severity_settings",	"args": {"log_level": "ERROR", "log_operation": "highlight"},
-  	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "super+3"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "WARN",
+      "log_operation": "filter"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+1"], "command": "update_column_settings",	"args": {"column_index": 0},
-    	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "super+4"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "ERROR",
+      "log_operation": "filter"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+2"], "command": "update_column_settings",	"args": {"column_index": 1},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "alt+1"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "DEBUG",
+      "log_operation": "highlight"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+3"], "command": "update_column_settings",	"args": {"column_index": 2},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "alt+2"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "INFO",
+      "log_operation": "highlight"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+4"], "command": "update_column_settings",	"args": {"column_index": 3},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "alt+3"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "WARN",
+      "log_operation": "highlight"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+5"], "command": "update_column_settings",	"args": {"column_index": 4},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "alt+4"
+    ],
+    "command": "update_severity_settings",
+    "args": {
+      "log_level": "ERROR",
+      "log_operation": "highlight"
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+6"], "command": "update_column_settings",	"args": {"column_index": 5},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "ctrl+1"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 0
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+7"], "command": "update_column_settings",	"args": {"column_index": 6},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "ctrl+2"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 1
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+8"], "command": "update_column_settings",	"args": {"column_index": 7},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "ctrl+3"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 2
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   },
-
-  { "keys": ["ctrl+9"], "command": "update_column_settings",	"args": {"column_index": 8},
-      	"context": [{"key": "setting.is_log", "operator": "equal", "operand": true}]
+  {
+    "keys": [
+      "ctrl+4"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 3
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+5"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 4
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+6"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 5
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+7"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 6
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+8"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 7
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "keys": [
+      "ctrl+9"
+    ],
+    "command": "update_column_settings",
+    "args": {
+      "column_index": 8
+    },
+    "context": [
+      {
+        "key": "setting.is_log",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
   }
 ]
