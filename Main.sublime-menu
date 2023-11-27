@@ -14,8 +14,7 @@
                 "args": {
                   "base_file": "${packages}/LogbackJsonLogViewer/LogbackJsonLogViewer.sublime-settings",
                   "default": "{\n$0\n}\n"
-                },
-                "caption": "LogbackJsonLogViewer Settings"
+                }
               }
             ]
           }
