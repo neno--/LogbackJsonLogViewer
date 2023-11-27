@@ -38,6 +38,7 @@
     }
   ],
   "stacktraceVisible": true,
+  "contextMenuItemVisible": true,
   "severity": {
     "DEBUG": {
       "visible": true,

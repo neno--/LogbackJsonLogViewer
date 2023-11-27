@@ -72,6 +72,10 @@ class ViewLogCommand(sublime_plugin.TextCommand):
         lines.append(str(line))
     return lines
 
+  def is_visible(self):
+    return sublime.load_settings('LogbackJsonLogViewer.sublime-settings').get(
+      "contextMenuItemVisible")
+
 
 class UpdateSeveritySettingsCommand(sublime_plugin.TextCommand):
   def run(self, edit, log_level, log_operation):
