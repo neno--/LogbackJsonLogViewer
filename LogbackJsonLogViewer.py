@@ -12,11 +12,11 @@ def display_log(self):
       line = parsed_line
       self.run_command('append', {"characters": line + "\n"})
     else:
-      log_level = parsed_line['severity']
+      log_level = parsed_line.get('severity', 'UNKNOWN')
       if self.settings().get("log_settings")["severity"][log_level]["visible"]:
         line = log_line(parsed_line,
                         self.settings().get("log_settings")["columns"])
-        if parsed_line["stacktrace"] and self.settings().get("log_settings")[
+        if parsed_line.get("stacktrace") and self.settings().get("log_settings")[
           "stacktrace_visible"]:
           line += "\n" + parsed_line["stacktrace"]
 
@@ -39,7 +39,7 @@ def log_line(parsed_line, columns):
   first = True
 
   for column in columns:
-    value = parsed_line[column["name"]]
+    value = parsed_line.get(column["name"], "")
     if column["visible"] and (len(value.strip()) > 0):
       line += ("" if first else " ") + value
       first = False
@@ -67,7 +67,12 @@ class ViewLogCommand(sublime_plugin.TextCommand):
     lines = []
     for line in file_content.split('\n'):
       try:
-        lines.append(json.loads(line))
+        parsed = json.loads(line)
+        # Only accept dicts; non-object JSON (int, list, etc.) becomes a plain text line
+        if isinstance(parsed, dict):
+          lines.append(parsed)
+        else:
+          lines.append(str(parsed))
       except ValueError:
         lines.append(str(line))
     return lines
